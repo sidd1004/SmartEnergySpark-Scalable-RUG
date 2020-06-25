@@ -1,0 +1,21 @@
+version: '2'
+services:
+  cassandra0:
+    image: cassandra
+    ports:
+      - '9042:9042'
+      - '7199:7199'
+    networks:
+      - mynet
+  cassandra1:
+    image: cassandra
+    ports:
+      - '9142:9042'
+    links:
+      - 'cassandra0:seed'
+    networks:
+      - mynet
+    environment:
+      - CASSANDRA_SEEDS=seed
+    labels:
+      kompose.service.type: LoadBalancer

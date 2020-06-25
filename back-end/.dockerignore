@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Scala template
+*.class
+*.log
+
+/tmp/
+/target/streams/
+/home/swastik/workspace/gitRepo/ScalableComputing/2020_group_25_s4056167_s3922782_s4151968/back-end/target/streams/
